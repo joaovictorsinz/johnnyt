@@ -1,0 +1,12 @@
+body{
+    background-color: rgba(43, 4, 80, 0.76);
+}
+.img-aumentar {
+    width: 9%; /*largura*/
+    height: 5%; /* altura // Mantém a proporção da imagem */
+  }
+  
+  .img-diminuir {
+    width: 55%;
+    height: 25%; /* Mantém a proporção da imagem */
+  }
