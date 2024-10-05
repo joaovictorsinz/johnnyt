@@ -1,0 +1,390 @@
+:root,
+:root[data-theme="dark"] {
+    --primary-color: #ebebeb;
+    --primary-bg: #1d1d1d;
+    --hover-menu: #fffefe;
+    --icon-color: #e98007;
+    --icon-theme: #d46802;
+    --menu-texto: #ebebeb;
+
+    --cor-titulo: #ebebeb;
+}
+
+:root[data-theme="light"] {
+    --primary-color: #1d1d1d;
+    --primary-bg: #ebebeb;
+    --menu-texto:#1d1d1d;
+    --cor-titulo: #1d1d1d;
+
+}
+
+/* CSS Geral */
+body{
+    background: var(--primary-bg);  /* fundo */
+    color: var(--primary-color);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 22px; 
+}
+html[data-theme="light"] .logo {
+  filter: invert(1);
+}
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+a:hover{
+  color: var(--hover-menu)
+}
+
+i {
+  color: var(--icon-color);
+}
+
+b{ font-weight: 600px; 
+
+}
+
+h1{
+  font-size:2.5rem;
+  font-weight: 200;
+}
+
+p, span, li{
+  font-size: 1rem;
+}
+
+p {
+ text-align: justify;
+}
+
+ /* reset css */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+/* fim reset */
+
+.logo{
+  width: 5rem;
+  height: 5rem;
+
+}
+
+  /* header */
+
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.7rem 2.5rem;
+    z-index: 2;
+    background: var(--primary-bg);
+}
+
+.header-toggle {
+    display: flex;
+    justify-content:flex-end;
+}
+
+#toogleTheme {
+    color: var(--icon-theme);
+    font-size: 2rem;
+    cursor: pointer;
+}
+   .header-nav{
+    display: none;
+   }
+  .menu{
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg);
+    gap: 1.5rem;
+  }
+
+  .menu-item {
+    width: 100%;
+  }
+
+  .menu-mobile{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px orangered;
+  }
+
+  .menu-icon, .menu-text{
+    color: var(--icon-color);
+    font-weight: 600;
+  }
+
+  .menu-icon{
+    font-size: 2.0rem;
+  }
+
+  .menu-mobile .menu-link {
+    flex-direction: column ;
+    justify-content: center;
+    padding: 0.5rem 0.1px;
+  }
+  
+  .menu-text {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  .menu-link.active .menu-icon,
+  .menu-link.active .menu-text,
+  .menu-link:hover .menu-icon,
+  .menu-link:hover .menu-text{
+    color: var(--primary-color);
+  }
+
+.menu-principal {
+    gap: 1.7rem;
+  }
+
+.menu-social {
+      gap: 2rem;
+    }
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background: transparent;
+    color: var(--primary-color);
+    border-radius: 3rem;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border: none;  
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  transition: ease-in-out .4s;
+
+}
+
+  .btn span, .btn i {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .btn-primary span {
+    color: var(--primary-color);
+  }
+
+  .btn-primary{
+    border: 1px solid var(--primary-color);
+  }
+
+  #home {
+display: flex;
+flex-direction: column;
+gap: 4rem;
+
+  }
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.video iframe {
+ width: 100%;
+aspect-ratio: 16/9;
+}
+#home, .projects, .services, .about{
+
+padding: 4rem 8rem;
+
+}
+
+.menu-social .menu-icon {
+  color: var(--icon-color);
+}
+
+.menu-social .menu-icon:hover {
+  color: var(--primary-color);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-container {
+display: flex;
+flex-direction: column;
+gap: 4rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-title{
+  font-size: 2rem;
+  color: var(--cor-titulo);
+  font-weight: 100;
+  
+
+}
+
+.card-description{
+  color: ;
+
+
+}
+
+.card-list, .upper-list{
+  margin-left: 1.25rem;
+  margin-top: 15px;
+  margin-bottom: 25px;
+
+}
+
+.card-item, .upper-item{
+  list-style: disc;
+
+}
+
+.card-button, .card-description {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+}
+
+.card-button .btn {
+  padding: .65rem 1.25rem;
+  margin-top: 15px;
+}
+
+.card-button .btn span{
+  font-size: 1rem;  
+}
+
+.projects .btn{
+  width: auto;
+  margin: auto;
+}
+
+  @media (min-width: 768px) {
+    #header{
+
+      position: fixed;
+      padding: 1rem 6rem;
+    }
+
+    .nav-mobile{
+      display: none;
+    }
+    .header-nav{
+      display: flex;
+    }
+
+    .header-nav, .header-toggle {
+      min-width: 30%;
+    }
+
+    h1 {
+      font-size: 5rem;
+    }
+
+    h2{
+
+    }
+
+    h3{
+
+    }
+
+    #home, .projects, .about, .services{
+padding: 8rem 6rem 4rem 6rem;
+    }
+
+  }
+
+@media (min-width: 992px) {
+
+  .project-card {
+    flex-direction: row;
+  }
+  .card-reverse {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .card-cover {
+    width: 55%;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  #home {
+    padding: 10rem 6rem 2rem;
+  }
+
+  .main-content .btn {
+    width: auto;
+  }
+
+  p, span, li {
+
+    font-size: 1.15rem;
+  }
+
+  .card-button .btn, .description-button .btn {
+    width: auto;
+  }
+
+}
+
+@media (min-width: 1400px) {
+
+  h1 {
+    font-size: 6.25rem;
+  }
+  h2 {
+    font-size: 4.5rem;
+  }
+  h3 {
+    font-size: 3.25rem;
+  }
+  .header {
+    padding: 12rem 15rem 2rem;
+  }
+
+  .projects, .about, .services {
+    padding: 10rem 15rem 4rem;
+  }
+
+}
